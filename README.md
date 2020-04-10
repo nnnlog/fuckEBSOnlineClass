@@ -1,9 +1,9 @@
-# fuckEBSOnlineClass
-EBS 온라인 클래스 진도율 주작치기
+# Vulnerability of EBSOnlineClass
+EBS 온라인 클래스 취약점
 
 ### 사용법
 <img src="/images/photo_2020-04-10_00-20-36.jpg">
-수강 완료하고 싶은 강의에 들어간다.<br><br>
+수강 완료하고 싶은 강의에 들어가서,<br>
 F12 또는 Ctrl+Shift+I를 눌러서, 개발자 도구를 실행한다.<br>
 Console 탭으로 이동한 후 아래 코드를 복붙한다.
 
@@ -19,7 +19,7 @@ postData.lrnTime = revivTime;
 $.post('/mypage/userlrn/lctreLrnSave.do', postData)
 ```
 <img src="/images/photo_2020-04-10_00-20-37.jpg">
-위처럼 아무런 오류 메세지가 없으면 된 것이다.
+위처럼 아무런 오류 메세지가 없으면 됐다.
 
-### 유도 과정 / 분석
+### 분석
 [https://blog.naver.com/sorisem4106/221900009549](https://blog.naver.com/sorisem4106/221900009549)
