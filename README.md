@@ -4,7 +4,7 @@ EBS 온라인 클래스 취약점
 ```js
 let wait = async(ms) => new Promise(r => setTimeout(() => r(), ms));
 let run = async() => {
-    for (let i = 0; i < revivTime / 10; i++) {
+    for (let i = Math.ceil(revivTime / 120); i > 0; i--) {
         var postData = {};
         postData.atnlcNo = $("#atnlcNo").val();
         postData.lctreSn = $("#lctreSn").val();
@@ -12,13 +12,14 @@ let run = async() => {
         postData.lctreSeCode = $("#lctreSeCode").val();
         postData.cntntsTyCode = $("#cntntsTyCode").val();
         postData.revivTime = $("#revivTime").val();
-        i + 1 === revivTime && (postData.endButtonYn = "Y");
-        postData.lrnTime = 10;
+        i === 1 && (postData.endButtonYn = "Y");
+        postData.lrnTime = 120;
         $.post('/mypage/userlrn/lctreLrnSave.do', postData);
         await wait(50);
     }
 };
 run();
+
 
 ```
 
